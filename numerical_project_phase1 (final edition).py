@@ -531,7 +531,7 @@ class Gauss_Seidel:
                             x -= tool.precision(array[i][j], p)*initial[j]
                     x /= array[i][i]
                     if(x != 0):
-                        E.append(tool.precision((abs(x - initial[i])/x)*100,p))
+                        E.append(tool.precision(abs((x - initial[i])/x)*100,p))
                     else:
                         E.append(math.inf)
                     initial[i] = tool.precision(x, p)
@@ -565,7 +565,7 @@ class Jacobi:
                     x /= array[i][i]
                     temp.append(tool.precision(x,p))
                     if(x != 0):
-                        E.append(tool.precision((abs(x - initial[i])/x)*100,p))
+                        E.append(tool.precision(abs((x - initial[i])/x)*100,p))
                     else:
                         E.append(math.inf)
                 for k in range(len(array)):
